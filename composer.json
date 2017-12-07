@@ -1,0 +1,25 @@
+{
+    "name": "dallincoons/conditionals-to-polymorphism",
+    "description": "Example of refactoring conditionals to polymorphism",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Dallin",
+            "email": "dallinis@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Refactoring\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
+}
