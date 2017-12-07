@@ -21,7 +21,7 @@ class Movie
     public function __construct(string $name, int $priceCode)
     {
         $this->name = $name;
-       $this->priceCode = $priceCode;
+        $this->priceCode = $priceCode;
     }
 
     public function getCharge(int $daysRented)
@@ -54,6 +54,11 @@ class Movie
         } else {
             return 1;
         }
+    }
+
+    public function setPriceCode(int $priceCode)
+    {
+        $this->priceCode = $priceCode;
     }
 
     public function getPriceCode()
