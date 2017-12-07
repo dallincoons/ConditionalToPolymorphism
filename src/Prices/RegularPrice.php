@@ -10,4 +10,13 @@ class RegularPrice extends Price
     {
         return Movie::REGULAR;
     }
+
+    public function getCharge(int $daysRented)
+    {
+        $result = 2;
+        if ($daysRented) {
+            $result += ($daysRented - 2) * 1.5;
+        }
+        return $result;
+    }
 }

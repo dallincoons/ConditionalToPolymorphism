@@ -10,4 +10,9 @@ class NewReleasePrice extends Price
     {
         return Movie::NEW_RELEASE;
     }
+
+    public function getCharge(int $daysRented)
+    {
+       return ($daysRented * 3);
+    }
 }
