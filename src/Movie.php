@@ -4,12 +4,13 @@ namespace Refactoring;
 
 use Refactoring\Prices\ChildrensPrice;
 use Refactoring\Prices\NewReleasePrice;
+use Refactoring\Prices\Price;
 use Refactoring\Prices\RegularPrice;
 
 class Movie
 {
     /**
-     * @var int
+     * @var Price
      */
     private $priceCode;
 
@@ -62,11 +63,23 @@ class Movie
 
     public function setPriceCode(int $priceCode)
     {
-        $this->priceCode = $priceCode;
+        switch ($priceCode) {
+            case Movie::REGULAR:
+                $this->priceCode = new RegularPrice();
+                break;
+            case Movie::NEW_RELEASE:
+                $this->priceCode = new NewReleasePrice();
+                break;
+            case Movie::CHILDRENS:
+                $this->priceCode = new ChildrensPrice();
+                break;
+            default:
+                throw new \Exception('no price with code:' . $priceCode);
+        }
     }
 
     public function getPriceCode()
     {
-        return $this->priceCode;
+        return $this->priceCode->getPriceCode();
     }
 }
