@@ -2,6 +2,10 @@
 
 namespace Refactoring;
 
+use Refactoring\Prices\ChildrensPrice;
+use Refactoring\Prices\NewReleasePrice;
+use Refactoring\Prices\RegularPrice;
+
 class Movie
 {
     /**
@@ -21,7 +25,7 @@ class Movie
     public function __construct(string $name, int $priceCode)
     {
         $this->name = $name;
-        $this->priceCode = $priceCode;
+        $this->setPriceCode($priceCode);
     }
 
     public function getCharge(int $daysRented)

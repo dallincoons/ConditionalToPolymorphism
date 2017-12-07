@@ -2,10 +2,12 @@
 
 namespace Refactoring\Prices;
 
+use Refactoring\Movie;
+
 class NewReleasePrice extends Price
 {
     function getCharge()
     {
-        // TODO: Implement getCharge() method.
+        return Movie::NEW_RELEASE;
     }
 }
