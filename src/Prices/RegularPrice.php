@@ -6,7 +6,7 @@ use Refactoring\Movie;
 
 class RegularPrice extends Price
 {
-    function getCharge()
+    function getPriceCode()
     {
         return Movie::REGULAR;
     }

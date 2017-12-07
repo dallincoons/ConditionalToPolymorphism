@@ -6,7 +6,7 @@ use Refactoring\Movie;
 
 class ChildrensPrice extends Price
 {
-    function getCharge()
+    function getPriceCode()
     {
         return Movie::CHILDRENS;
     }

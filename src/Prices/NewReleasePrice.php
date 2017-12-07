@@ -6,7 +6,7 @@ use Refactoring\Movie;
 
 class NewReleasePrice extends Price
 {
-    function getCharge()
+    function getPriceCode()
     {
         return Movie::NEW_RELEASE;
     }
